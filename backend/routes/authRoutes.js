@@ -22,7 +22,7 @@ router.put('/users/:id', protect, async (req, res) => {
   try {
     const userId = req.params.id;
 
-    // Optional: Check if the ID matches the logged-in user's ID for security
+    
     if (req.user.id !== userId) {
       return res.status(403).json({ message: 'Access denied' });
     }
@@ -31,7 +31,7 @@ router.put('/users/:id', protect, async (req, res) => {
       userId,
       { $set: req.body },
       { new: true, runValidators: true }
-    ).select('-password'); // exclude password from the response
+    ).select('-password'); 
 
     if (!updatedUser) {
       return res.status(404).json({ message: 'User not found' });
