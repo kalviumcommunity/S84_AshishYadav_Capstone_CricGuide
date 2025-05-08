@@ -18,6 +18,7 @@ router.get('/users', protect, async (req, res) => {
   
 
 router.put('/users/:id', protect, async (req, res) => {
+
   try {
     const userId = req.params.id;
 
@@ -41,9 +42,22 @@ router.put('/users/:id', protect, async (req, res) => {
     console.error('Error updating user:', err.message);
     res.status(500).json({ message: 'Server Error' });
   }
+
+    try {
+      const updatedUser = await User.findByIdAndUpdate(
+        req.params.id,
+        { $set: req.body },
+        { new: true }
+      );
+      res.json(updatedUser);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).json({ message: 'Server Error' });
+    }
+
 });
 
 router.post('/signup', register);
 router.post('/login', login);
 
-module.exports = router;
+module.exports = router
