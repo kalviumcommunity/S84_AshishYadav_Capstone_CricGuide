@@ -8,12 +8,29 @@
 }
 
 .left-content, .right-content {
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 100px;
+  padding: 30px;
+}
+
+.left-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   flex: 1;
   min-width: 300px;
+
+  margin-left: 100px;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-left: 700px;
 }
 
 .carousel-placeholder {
