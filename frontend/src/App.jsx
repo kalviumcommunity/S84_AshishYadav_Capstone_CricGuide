@@ -18,6 +18,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/learn" element={<Learn />} />
       <Navbar />
+      </Routes>
       <Routes>
         <Route path="/" element={<Home />} />
         {/* Dummy endpoints for navigation */}
