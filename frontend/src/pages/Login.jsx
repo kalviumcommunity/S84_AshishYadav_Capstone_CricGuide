@@ -1,6 +1,7 @@
 // src/pages/Login.jsx
 import React, { useState } from 'react';
-import './Auth.css'; // You can use a common CSS file for both login/signup
+import { Link } from 'react-router-dom';
+import './Auth.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -32,6 +33,10 @@ const Login = () => {
         />
         <button type="submit">LOGIN</button>
       </form>
+
+      <p>
+        New user? <Link to="/signup">Signup</Link>
+      </p>
     </div>
   );
 };

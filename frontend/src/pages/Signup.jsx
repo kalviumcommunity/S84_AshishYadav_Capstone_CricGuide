@@ -1,5 +1,6 @@
 // src/pages/Signup.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Auth.css';
 
 const Signup = () => {
@@ -40,6 +41,10 @@ const Signup = () => {
         />
         <button type="submit">SIGNUP</button>
       </form>
+
+      <p>
+        Already have an account? <Link to="/login">Login</Link>
+      </p>
     </div>
   );
 };
