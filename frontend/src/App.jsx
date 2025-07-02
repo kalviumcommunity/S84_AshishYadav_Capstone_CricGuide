@@ -23,6 +23,8 @@ import BeginnerFielding from './pages/FieldingBeginner';
 import IntermediateFielding from './pages/FieldingIntermediate';
 import ProfessionalFielding from './pages/FieldingProfessional';
 import About from './pages/About';
+import TrainerTrainee from './pages/TrainerTrainee';
+
 
 function App() {
   return (
@@ -36,6 +38,7 @@ function App() {
 <Route path="/contact" element={<ContactUs />} />
 <Route path="/about" element={<About />} />
 
+<Route path="/trainer-trainee" element={<TrainerTrainee />} />
   <Route path="/learn/batting" element={<Batting />} />
   <Route path="/learn/bowling" element={<Bowling />} />
   <Route path="/learn/fielding" element={<Fielding />} />

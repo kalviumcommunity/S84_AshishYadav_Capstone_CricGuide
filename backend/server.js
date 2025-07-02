@@ -6,6 +6,7 @@ const authRoutes = require('./routes/authRoutes');
 const contactRoutes = require('./routes/contactRoutes');
 
 
+const trainerTraineeRoutes = require('./routes/trainerTraineeRoutes');
 
 dotenv.config();
 
@@ -13,7 +14,8 @@ const app = express();
 app.use('/api/contact', contactRoutes);
 app.use(cors());
 app.use(express.json());
-
+app.use('/uploads', express.static('uploads'));
+app.use('/api/trainertrainee', trainerTraineeRoutes);
 app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res) => {
