@@ -17,7 +17,7 @@ const ContactUs = () => {
     setLoading(true);
     setStatus('');
     try {
-      await axios.post('http://localhost:5000/api/contact/send', formData);
+      await axios.post('https://s84-ashishyadav-capstone-cricguide-1.onrender.com/api/contact/send', formData);
       setStatus('✅ Message sent successfully!');
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
