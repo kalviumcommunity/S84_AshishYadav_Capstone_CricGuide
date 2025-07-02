@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const TrainerTrainee = require('../models/TrainerTraineeModel');
 const multer = require('multer');
+const path = require("path");
+
 
 // Storage setup
 const storage = multer.diskStorage({
