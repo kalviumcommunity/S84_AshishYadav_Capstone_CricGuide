@@ -10,13 +10,13 @@ const trainerTraineeRoutes = require("./routes/trainerTraineeRoutes");
 dotenv.config();
 
 const app = express();
-app.use("/api/contact", contactRoutes);
 app.use(
   cors({
     origin: "https://cricguide.netlify.app",
     credentials: true, // if you're using cookies or sessions
   })
 );
+app.use("/api/contact", contactRoutes);
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 app.use("/api/trainertrainee", trainerTraineeRoutes);
