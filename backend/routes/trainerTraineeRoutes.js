@@ -8,14 +8,14 @@ const path = require("path");
 // Storage setup
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    cb(null, 'uploads/'); // ensure this folder exists
+    cb(null, 'uploads/'); 
   },
   filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname)); // rename file with timestamp
+    cb(null, Date.now() + path.extname(file.originalname)); 
   }
 });
 const upload = multer({ storage: storage });
-
+ 
 router.post('/link', async (req, res) => {
   const { code, role } = req.body;
   try {
