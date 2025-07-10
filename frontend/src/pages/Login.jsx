@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("http://s84-ashishyadav-capstone-cricguide-1.onrender.com/api/auth/login", {
         email,
         password
       });
