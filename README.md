@@ -1,10 +1,12 @@
 # S84_AshishYadav_Capstone_CricGuide
 
 # CRICKET GUIDE
+Website URL - https://cricguide.netlify.app/
 
 **By Ashish Yadav**  
 **SQUAD 84**  
 **CHITKARA UNIVERSITY, HIMACHAL PRADESH**
+
 
 ---
 
